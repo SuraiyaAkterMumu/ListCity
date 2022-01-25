@@ -49,15 +49,15 @@ public class MainActivity extends AppCompatActivity {
         cityList.setAdapter(cityAdapter);
 
 //        *********************** new **************************
-//        cityList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                Intent in = new Intent(MainActivity.this, ShowActivity.class);
-//                String city = cityList.getItemAtPosition(0).toString();
-//                in.putExtra("key",city);
-//                MainActivity.this.startActivity(in);
-//            }
-//        });
+        cityList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent in = new Intent(MainActivity.this, ShowActivity.class);
+                String city = cityList.getItemAtPosition(0).toString();
+                in.putExtra("key",city);
+                MainActivity.this.startActivity(in);
+            }
+        });
 //        *************************************************************
 
         final Button addButton = findViewById(R.id.button_add);
